@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "A A"
+        "B C"
+        ". C"
+        ". C"
+        "D D";
+
+        
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 150px 80px 100px 100px;
+    padding: 16px;
+    gap: 16px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+
+}
+header{
+    background: lightgreen;
+    grid-area: A;
+    h1{
+        font-size: 2,5rem;
+    }
+}
+main{
+    background: lightsalmon;
+    grid-area: B;
+
+}
+aside{
+    background: lightgrey;
+    grid-area: C;
+}
+footer{
+    background: rebeccapurple;
+    grid-area: D;
+}

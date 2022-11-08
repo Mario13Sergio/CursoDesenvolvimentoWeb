@@ -1,0 +1,256 @@
+:root{
+    font-size: 6.25%;
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+
+    width: 100%;
+    font-size: 16rem;
+    /* background:linear-gradient(lightgray, lightgreen); */
+}
+h1{
+    text-align: center;
+}
+
+header{
+    padding: 24rem;
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(brown, rgb(188, 57, 57));
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+    align-items: center;
+
+}
+header img{
+    width: 20%;
+    height: auto;
+
+    object-fit: cover;
+    object-position: center;
+}
+#homeMenu,
+#artigoMenu,
+#contactMenu{
+    color: green;
+}  
+
+
+nav ul{
+    /* width: 200rem; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 18rem;
+    
+    list-style: none;
+}
+nav ul li {
+    padding: 8rem;
+    border-radius: 4rem;
+    
+}
+nav ul li:hover{ 
+      background: rgba(0, 255, 30, 0.2);
+}
+
+.showBarImages{
+    width: 100%;
+    height: 240rem;
+    position: relative;
+
+    overflow: hidden;
+}
+.showImage {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    /* opacity: 0; */
+
+    animation: showBarImageAnimation 15s;
+    animation-iteration-count: infinite;
+
+
+}
+.showImage:nth-child(1){animation-delay: 0s;}
+.showImage:nth-child(1){animation-delay: 5s;}
+.showImage:nth-child(1){animation-delay: 10s;}
+
+/* main{
+
+    color: blue;
+    
+} */
+aside{
+    padding: 16rem;
+}
+.cards {
+    max-width: 1024rem;
+    padding: 16rem;
+    /* display: flex;
+    flex-direction: column;
+    gap: 32rem; */
+    display: grid;
+    place-items: center;
+
+    margin: 0 auto;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(3, 1fr)0 */
+    /* grid-template-columns: repeat(3, minmas(200rem, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(300rem, 1fr));
+
+    gap: 16rem;
+    transition: transform 300ms, brightness 300ms;
+
+}
+
+.card:hover{
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+.card{
+    box-shadow: .1rem .1rem 2rem 1rem black;
+    overflow: hidden;
+    border-radius: 8rem;
+}
+
+.card .part2 {
+    padding: 8rem;
+    
+}
+.card .part2 h3 {
+    font-size: 32rem;
+}
+
+
+.card .part2 p {
+    font-size: 20rem;
+    margin-bottom: 16rem;
+}
+
+
+.card .part2 button {
+    color: white;
+    background: brown;
+    text-decoration: none;
+    padding: 8rem;
+    border-radius: 8rem;
+    width: 120rem;
+    font-size: 16rem;
+    font-weight: 700;
+}
+
+.card img{
+    width: 100%;
+    height: 240rem;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 8rem;
+    box-shadow: .1rem .1rem 2rem 1rem black;
+}
+footer{
+    font-size: 32rem;
+    color: white;
+
+    padding: 16rem;
+
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(188, 57, 57),black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+}
+.footerLogo{
+    margin: 0%;
+}
+.footerLogo h2{
+    margin-top: 32rem;
+}
+.footerLogo img{
+    width: 25%;
+    border-radius: 50%;
+    margin-top: 32rem;
+    
+}
+.footerLocal iframe{
+    width: 100%;
+    margin-top: 32rem;
+
+}
+.footerSocialMedias{
+    margin-top: 32rem;
+
+}
+.footerSocialMediasImages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16rem;
+
+    margin: 16rem;
+    
+
+}
+
+.footerSocialMediasImages img{
+    width: 40rem;
+}
+@keyframes showBarImageAnimation{
+    25% {
+        opacity: 1;
+        transform: scale(1.1, 1.1);
+    }
+    50% {
+        opacity: 0;
+        
+    }
+}
+
+@media (min-width: 480px) {
+    header img{
+        width: 80rem;
+
+    }
+
+    .footerLogo{
+        width: 60%;
+    }
+    .footerLocal iframe{
+        height: 400rem;
+        width: 500rem;
+    }
+}
+
+@keyframes topDownOpacityAnimation {
+    0%{
+        opacity: 0;
+        translate: translatey(-10rem);
+
+    }
+
+    100%{
+        opacity: 1;
+        translate: translatey(0rem);
+
+    }
+}
+
+
+    

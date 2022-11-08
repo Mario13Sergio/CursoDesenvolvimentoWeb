@@ -1,0 +1,68 @@
+/* reset com seletor universal */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 38px;
+}
+h1{
+    position: sticky;
+    top: 48px;
+    font-style: italic;
+    background: red;
+
+    }
+    section{
+        padding: 48px;
+        font-size: 72px;
+        justify-content: center;
+    }
+main{
+    position: relative;
+    height: 80vh;
+    border: solid 2px black;
+    /* padding: 32px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* gap: 64px; */
+
+}
+div{
+    height: 180px;
+    width: 180px;    
+    /* border: solid 1px black; */
+    color: white;
+    font-size: 64px;
+    padding: 16px;
+    /* margin: 16px; */
+    /* display: inline-block; */
+}
+.square1{
+    background: red;
+    position: absolute;   
+    /* top: 8px; */
+    /* right: 8px; */
+    /* bottom: 20px; */
+    
+}
+.square2{
+    background: green;
+    position: absolute;
+    left: 48px;
+    top: 48px;
+}
+.square3{
+    background: blue;
+    position: absolute;
+    left: 108px;
+    top: 108px;
+}
+
+
+
+

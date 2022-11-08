@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label-loading{
+    position: absolute;
+}
+.circle-loading{
+    border: 16px solid gray;
+    border-top-color: blue;
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    animation-name: rotationLoading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+  
+}
+@keyframes rotationLoading{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}

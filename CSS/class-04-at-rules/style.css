@@ -1,0 +1,85 @@
+@charset "utf8";
+@import url("/CSS/class-02-box-model/style.css");
+@font-face {
+    font-family: myfontsimpson;
+    src: url(/CSS/class-04-at-rules/fonts/Homer_Simpson_Revised.ttf);
+}    
+
+@font-face {
+    font-family: playstation2;
+    src: url(/CSS/class-04-at-rules/fonts/zrnic\ rg.ttf);
+}
+
+
+    
+
+
+article{
+    display: flex;
+    gap: 64px;
+    animation-name: MyAnimation;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+    h2{
+        font-size: 32px;
+         animation-name:MyAnimationRotation;
+         animation-duration: 1000ms;
+         animation-iteration-count: 1;
+         animation-timing-function: ease-in-out;
+         display: inline-block;
+    }
+
+    p{
+        font-size: 24px;
+    }
+    
+h3{
+    font-family: myfontsimpson;
+    font-size: 32px;
+    
+}
+h3.playstation{
+    
+    font-family: playstation2;
+    font-size: 48px;
+}
+    @media (max-width:720px) {
+        article{
+            display: inline-block;
+        }
+        
+
+        /* div.square1{
+            position: static; */
+        }
+        
+    
+
+    @keyframes MyAnimation {
+        0% {
+            opacity: 0;
+            
+        }
+        50%{
+            opacity: 0,25;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes MyAnimationRotation {
+        to {
+            transform: rotateZ(0deg);
+        }
+        
+        from {
+            transform: rotateZ(360deg);
+        }
+    }
+
+
+   
+   
