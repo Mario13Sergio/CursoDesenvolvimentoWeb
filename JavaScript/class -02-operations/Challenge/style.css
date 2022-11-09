@@ -1,0 +1,18 @@
+:root{
+    font-size: 6.25%;
+    
+}
+header{
+    text-align: center;
+    color: brown;
+    font-size: 16rem;
+}
+div{
+    background: rgb(166, 215, 166);
+    text-align: center;
+    border-radius: 8rem;
+    font-size: 16rem;
+    color: blue;
+
+}
+
