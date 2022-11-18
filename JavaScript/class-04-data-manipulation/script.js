@@ -73,9 +73,9 @@
 
 // >>>>>>>>>>>>>> Date Manipulation <<<<<<<<<<<<
 
-date = new Date()
-let date1 = new Date('2022-11-17 12:03:19')
-let date2 = new Date('2022-11-18 15:03:19')
+// date = new Date()
+// let date1 = new Date('2022-11-17 12:03:19')
+// let date2 = new Date('2022-11-18 15:03:19')
 
 // document.write(date)
 
@@ -83,13 +83,13 @@ let date2 = new Date('2022-11-18 15:03:19')
 // document.write(date1.getMinutes())
 // document.write(date1.getSeconds())
 
-document.write(´${String(hour).padStart(2, "0")}:{String(minuts)).padStart(2, "0"):{String(seconds).padStart(2, "0")})
+// document.write(´${String(hour).padStart(2, "0")}:{String(minuts)).padStart(2, "0"):{String(seconds).padStart(2, "0")})
 
 
 
 
-//  document.write(date1.toLocaleTimeString("pr-BR"))
-//  document.write(date.toLocaleTimeString("pr-BR"))
+//  document.write(date1.toLocaleTimeString("pt-BR"))
+//  document.write(date.toLocaleTimeString("pt-BR"))
  
 // document.write(date.getDay()) // 0 - 6
 // document.write(date.getDate())
@@ -116,3 +116,38 @@ document.write(´${String(hour).padStart(2, "0")}:{String(minuts)).padStart(2, "
 
                                                 //   s     m    h    d
 // document.write(Math.floor(Math.abs(date1 - date2) / 1000 / 60 / 60 / 24))
+
+
+
+// >>>>>>>>>>>> Array Manipulation <<<<<<<<<<<<<
+
+// let myArray = Array[1, "a", () => "A"]
+// console.log(myArray)
+// console.log(myArray.length)
+// console.log(myArray[2]())
+
+// let techs = ['HTML', 'CSS', 'Git']
+// techs.push('JavaScript')
+
+// // let removeElement = techs.pop()
+
+// techs.unshift('SQL')
+// let removeElement = techs.shift()
+
+// // console.log(`${removeElement} foi removido!`)
+
+// let index = techs.slice(0, -1)
+
+
+
+// let index = techs.indexOf('CSS')
+// techs.splice(index, 1)
+// console.log(techs.splice(index, 1))
+// techs.splice(techs.indexOf("SQL"), 1)
+
+nums = [2, "2", 2, 1, 5, 19, 10, 20]
+// console.log(nums.sort((a, b) => a - b))
+
+// console.log(techs.sort())
+// console.log(index)
+document.write(nums.sort((a, b) => a - b))

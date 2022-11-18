@@ -1,11 +1,16 @@
-const digitalClock = document.querySelector ("#clock")
+// Crie um relógio digital no formato "hh:mm:ss"
+// Faça com que o mesmo atualize em tempo integral [setInterval()] 
+// Use um elemento html [DOM] para mostrar o relógio na tela  
 
-setInterval() => {
-    let date = new Date
-    let hour = date.getMinutes()
-    let Minutes = date.getMinutes()
-    let Seconds = date.getSeconds()
-    let milisecondos = date.getMilliseconds()
 
-    digitalClock.innerHTML = ´$(String(hour)). padStart(2, "0"):$(String(hour)). padStart(2, "0")$(String(hour)). padStart(2, "0")`
-}
+const digitalClock = document.querySelector("#digitalClock")
+
+setInterval( () => {
+    let date = new Date()
+    let hour = date.getHours()
+    let minutes = date.getMinutes()
+    let seconds = date.getSeconds()
+
+    digitalClock.innerHTML = `${String(hour).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`
+
+}, 100)
