@@ -58,7 +58,7 @@
 // }
 
 // for(let index in team){
-    // console.log(team[index])
+//     console.log(team[index])
 // }
 
 // console.log(team)
