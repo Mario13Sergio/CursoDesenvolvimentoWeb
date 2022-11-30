@@ -1,29 +1,29 @@
 // ARRAYS (Methods) - Principle of Immutability
 
-const teams = ['Brasil', 'Alemanha', 'Argentina', 'Portugal']
+// const teams = ['Brasil', 'Alemanha', 'Argentina', 'Portugal']
 
 
-teams.forEach((value, index, array) => {
-    console.log(value, index, array)
-})
+// teams.forEach((value, index, array) => {
+//     console.log(value, index, array)
+// })
 
-let teamArray = Array.from(teams)
-let test = teams.forEach((value, index, array) =>{
-    teams[index] = value +'teste'
+// let teamArray = Array.from(teams)
+// let test = teams.forEach((value, index, array) =>{
+//     teams[index] = value +'teste'
 
-})
+// })
 
-let teste = teams.map((v, i, a) => {console.log(v, i, a)
-return () => v + " posição " + i +1
-})
+// let teste = teams.map((v, i, a) => {console.log(v, i, a)
+// return () => v + " posição " + i +1
+// })
 
-console.log(teste[0]())
-console.log(teams)
-teams.map((v, i, a) => {
-    console.log(v, i, a)
-})
+// console.log(teste[0]())
+// console.log(teams)
+// teams.map((v, i, a) => {
+//     console.log(v, i, a)
+// })
 
-let team = Array.from('Brasil')
+// let team = Array.from('Brasil')
 // let testReturnForEach = team.forEach((team, index, array) => {
 //     console.log(team, index, array)
 // })
@@ -37,9 +37,12 @@ let team = Array.from('Brasil')
 
 // console.log(testReturnMap) // return
 
-const real = [10, 20, 30, 40, 50]
-// const convertDollar = real.map((value) => value * 5.36)
+// const real = [10, 20, 30, 40, 50]
+// let dollarValue = 5.26
+// const convertDollar = real.map((value) => +(value * dollarValue).toFixed(2))
 // const sumReal = real.reduce((a, b) => a + b)
+
+// console.log(sumReal);
 
 // const sumConvertedDollar = convertDollar.reduce((a, b) => a + b)
 
@@ -49,7 +52,7 @@ const real = [10, 20, 30, 40, 50]
 // console.log(real)
 // console.log(sumReal)
 
-// console.log(real.map(value => value * 5.36).reduce((a, b) => a + b))
+// console.log(real.map(value => value * dollarValue).reduce((a, b) => a + b))
 
 // console.log(real.filter((value) => value > 30))
 
