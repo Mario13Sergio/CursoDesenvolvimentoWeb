@@ -12,7 +12,7 @@ body {
     font-size: 1.6rem;
     height: 100vh;
 
-    /* color: white; */
+    color: white;
     background-image: url(/CursoDesenvolvimentoWeb/projects/IMC/background-img2.jpg);
     background-position: center;
     background-size: cover;
@@ -94,18 +94,26 @@ aside p {
 
 .modal {
     height: 20.0rem;
-    width: 24.0rem;
+    width: 32.0rem;
     margin: 0 auto;
 
-
+    color: black;
     padding: 3.2rem;
     border-radius: .8rem;
     box-shadow: .1rem .1rem .4rem black;
     position: relative;
     background: white;
 
-
 }
+
+.modal p {
+    color: black;
+    font-size: 3.8rem;
+    text-align: center;
+    font-weight: 700;
+    
+}
+
 .closeButon {
     position: absolute;
     top: 1.0rem;
