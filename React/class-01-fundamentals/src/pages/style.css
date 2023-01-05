@@ -1,0 +1,17 @@
+body {
+    background: rgba(205, 17, 17, 0);  
+    
+}
+h1{
+    text-align: center;
+    font-size: 3.6rem;
+    color: blue;
+   
+}
+section {
+    text-align: center;
+    font-size: unset;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: o auto;
+}
