@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 export function App() {
@@ -6,8 +6,18 @@ export function App() {
   const [count, setCount] = useState(0)
   const [text, setText] = useState('')
   const [text2, setText2] = useState('')
+  const [data, setData] = useState('')
 
-  console.log(name);  
+
+  // console.log(name);  
+  useEffect(() => {
+    if (text2)
+    console.log('antes');
+    fetch(`http://api.github.com/users/${text2}`)
+      .then(response => response.json())
+      .then((data) => setData(data))
+    console.log('depois');
+  },[text2])
   return (
     <div className='container'>
       <h1>Class Hooks</h1>
@@ -29,6 +39,12 @@ export function App() {
           }}>Enviar</button>
 
         </form>
+          <section>
+            <h2>{data.name}</h2>
+            <img src= {data.avatar_url} alt="" />
+            <p>{data.bio}</p>
+          </section>
+
       
     </div>
    
