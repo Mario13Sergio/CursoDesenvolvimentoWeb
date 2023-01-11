@@ -26,12 +26,20 @@ nav ul {
     font-size: 1.6rem;
     font-weight: bold;
 }
-ul a {
+nav ul a {
     text-decoration: none;
 }
-
-ul li {
+ul a {
     color: white;
     list-style: none;
 }
+
+.active {
+    color: #00d8ff;
+}
+
+/* ul li {
+    color: white;
+    list-style: none;
+} */
 

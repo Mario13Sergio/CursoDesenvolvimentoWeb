@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import logo from '../../assets/react.svg'
 import "./style.css"
 
@@ -14,9 +14,9 @@ export function Header() {
             </div>
             <nav>
                 <ul>
-                    <Link to ="/"><li>Home</li></Link>
-                    <Link to ="/galeria"><li>Galeria</li></Link>
-                    <Link to ="/contato"><li>Contato</li></Link>
+                    <NavLink to ="/" className={({isActive}) => isActive ? 'active' : ''}><li>Home</li></NavLink>
+                    <NavLink to ="/galeria" className={({isActive}) => isActive ? 'active' : ''}><li>Galeria</li></NavLink>
+                    <NavLink to ="/contato" className={({isActive}) => isActive ? 'active' : ''}><li>Contato</li></NavLink>
                 </ul>
             </nav>      
         </header>
