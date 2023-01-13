@@ -1,3 +1,5 @@
+import { BsThermometerHigh } from "react-icons/bs"
+import { GrSearch } from "react-icons/gr"
 import './style.css'
 
 export function App() {
@@ -8,8 +10,10 @@ export function App() {
       <header>
       <h1>Previsão do Tempo</h1>  
       <form action="">
-        <input type="text" placeholder='Nome da Cidade'/>
-        <button>Buscar</button> 
+        <label htmlFor="citySearchInput" className='srOnly'>Pesquisar o nome da cidade</label>
+        <input type="text" placeholder='Nome da Cidade' id='citySearchInput'/>
+        <GrSearch className="searchIcon"/>
+        <button className='searchButton'>Buscar</button> 
       </form>    
       </header>
 
@@ -23,11 +27,13 @@ export function App() {
           <section className='blockCurrentTime'>
             <div className='currentTime'>
               <div className='blockDgree'>
-                <img src="#" alt="icon" />
-                <p>25.6°</p>
-                <p>
+                <BsThermometerHigh className="iconThermometer"/>
+                
+                <p className="degreeCourrent">25.6°</p>
+
+                <p className="degreeMaxMin">                  
                   <span className='degreeMax'>32.0°</span>
-                  <span className='degreeNin'>20.0°</span>
+                  <span className='degreeMin'>20.0°</span>
                 </p>
               </div>
               <div className='blockSituation'>
