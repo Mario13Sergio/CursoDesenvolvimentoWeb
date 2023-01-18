@@ -1,20 +1,21 @@
 import { useState, useEffect  } from "react"
 import { BsThermometerHigh } from "react-icons/bs"
 import { GrSearch } from "react-icons/gr"
+import { ClimateCard } from "../components/Climate-Card"
 import './style.css'
 
 export function App() {
   const [searchedCity, setSearchedCity] = useState('jucas')
-  const [inputCity, setInputCity,] = useState('')
+  const [inputCity, setInputCity] = useState('')
   const [weatherData, setWeatherData] = useState(null)
+  const [dateNow, setDateNow] = useState()
 
   async function getCityWeather() {
     const response = await fetch(API)
     if (response.status == 200) {      
       const data = await response.json()
       setWeatherData(data)
-      console.log(data);
-    }else if (response.status == 400) {      
+      } else if (response.status == 400) {      
       alert('Cidade não encontrada')   
     }
   }
@@ -27,6 +28,15 @@ export function App() {
   useEffect(() => {
    getCityWeather()
   }, [searchedCity])
+
+  useEffect(() => {
+    const timer =setInterval(() => {
+      setDateNow( new Date().toLocaleString())
+    }, 1000)
+
+    return ( ) =>
+    clearInterval(timer)    
+  }, [])
 
 
   const API = `https://api.weatherapi.com/v1/forecast.json?key=fb85b303e1fe4286a2b15407223112&q=${searchedCity}&days=4&lang=pt`
@@ -50,11 +60,11 @@ export function App() {
 
       <main>
         {
-          weatherData && (
+         searchedCity && weatherData &&  (
             <article>
           <section className='blockCityName'>
-              <h2>{ weatherData.location.name }</h2>
-            <p>Brasil, 11/01/2023, 15:41:00</p>
+              <h2>{ weatherData.location.name }, { weatherData.location.region }</h2>
+            <p>{ weatherData.location.country }, {dateNow}</p>
           </section>
 
           <section className='blockCurrentTime'>
@@ -70,16 +80,19 @@ export function App() {
                 </p>
               </div>
               <div className='blockSituation'>
-                <img src="#" alt="icon" />
+                <img src= {weatherData.current.condition.icon} alt="icon" />
                 <div>
-                  <p>Parcialmente Sol Quente</p>
-                  <p>Sensação Térmica de 36.5°</p>
+                  <p>{weatherData.current.condition.text}</p>
+                  <p>{weatherData.current.feelslikr_c}</p>
                 </div>
               </div>
             </div>
           </section>
           <section className='containerWeatherCondition'>
-            {/* Componente */}
+            <ClimateCard climate= 'Vento' condition={`${weatherData.current.wind_kph}km/h`}/>
+            <ClimateCard climate= 'Umidade' condition={`${weatherData.current.wind_kph}%`}/>
+            <ClimateCard climate= 'Chuva' condition={`${weatherData.current.wind_kph}mm`}/>
+            
           </section>
 
           <section className='containerWetherForcast'>
@@ -88,7 +101,7 @@ export function App() {
             </ol>
           </section>
 
-            </article>
+          </article>
           )
         }
       </main>
