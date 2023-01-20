@@ -2,6 +2,7 @@ import { useState, useEffect  } from "react"
 import { BsThermometerHigh } from "react-icons/bs"
 import { GrSearch } from "react-icons/gr"
 import { ClimateCard } from "../components/Climate-Card"
+import { ForecastCard } from "../components/ForescastCard"
 import './style.css'
 
 export function App() {
@@ -83,21 +84,38 @@ export function App() {
                 <img src= {weatherData.current.condition.icon} alt="icon" />
                 <div>
                   <p>{weatherData.current.condition.text}</p>
-                  <p>{weatherData.current.feelslikr_c}</p>
+                  <p>{weatherData.current.feelslik_c}</p>
                 </div>
               </div>
             </div>
           </section>
           <section className='containerWeatherCondition'>
-            <ClimateCard climate= 'Vento' condition={`${weatherData.current.wind_kph}km/h`}/>
+            {/* <ClimateCard climate= 'Vento' condition={`${weatherData.current.wind_kph}km/h`}/>
             <ClimateCard climate= 'Umidade' condition={`${weatherData.current.wind_kph}%`}/>
-            <ClimateCard climate= 'Chuva' condition={`${weatherData.current.wind_kph}mm`}/>
+            <ClimateCard climate= 'Chuva' condition={`${weatherData.current.wind_kph}mm`}/> */}
             
           </section>
 
           <section className='containerWetherForcast'>
             <ol>
-              <li>Component "Map"</li>
+              {
+                weatherData.forecast.forecastday.map((forecastDay, index) => {
+                  return(                    
+                    <li key={index}>
+                      <ForecastCard 
+                        day={
+                          index == 0 ? 'Hoje' :
+                          Intl.DateTimeFormat('pt-BR', { weekday: 'short'})
+                          .format(new Date(forecastDay.date.split('-').join('/')))
+                        } 
+                        icon={forecastDay.day.condition.icon}
+                        tempMax={forecastDay.day.maxtemp_c}
+                        tempMin={forecastDay.day.mintemp_c}
+                      />
+                    </li>
+                  )
+                })
+              }
             </ol>
           </section>
 

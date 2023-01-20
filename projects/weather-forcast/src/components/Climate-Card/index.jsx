@@ -1,6 +1,6 @@
 import"./style.css"
 
-export function ClimateCard( climate, condition) {
+export function ClimateCard(climate, condition) {
     return(
         <div className="weatherCondition">
             <p>{climate}</p>
