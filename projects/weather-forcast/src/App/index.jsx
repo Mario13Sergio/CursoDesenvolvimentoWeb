@@ -90,9 +90,9 @@ export function App() {
             </div>
           </section>
           <section className='containerWeatherCondition'>
-            {/* <ClimateCard climate= 'Vento' condition={`${weatherData.current.wind_kph}km/h`}/>
+            <ClimateCard climate= 'Vento' condition={`${weatherData.current.wind_kph}km/h`}/>
             <ClimateCard climate= 'Umidade' condition={`${weatherData.current.wind_kph}%`}/>
-            <ClimateCard climate= 'Chuva' condition={`${weatherData.current.wind_kph}mm`}/> */}
+            <ClimateCard climate= 'Chuva' condition={`${weatherData.current.wind_kph}mm`}/>
             
           </section>
 
