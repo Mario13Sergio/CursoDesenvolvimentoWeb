@@ -5,6 +5,7 @@ export const ButtonHome = styled.button `
     color: ${({theme}) => theme.color.font};
     padding: .4rem .8rem;
     border-radius: .4rem;
+    
     &:hover {
         filter: brightness(0.9);
         cursor: pointer;
