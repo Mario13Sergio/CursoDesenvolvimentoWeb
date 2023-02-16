@@ -20,7 +20,8 @@ router.get('/user/:id:name', (req, res) => {
 //Body Params
 router.post('/user', (req, res) => { 
     const { id, name } = req.body;
-     res.send(`User: ${id} Nome:${name}`);
+     //res.send(`User: ${id} Nome:${name}`);
+     res.json({id, name})
 });
 
 
