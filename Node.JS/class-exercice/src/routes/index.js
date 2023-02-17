@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const router = Router();
-const contrrollers = require('../contrrollers');
+const controllers = require('../controllers');
 
 router.get('/',(req, res) => {
     res.send('Class 04 - Controllers');
